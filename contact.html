@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>TriStates Digital</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
+
+    <!-- Viewport -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Favicon and Touch Icons -->
+    <link rel="shortcut icon" href="assets/img/logo.png">
+    <meta name="theme-color" content="#ffffff">
+
+    <!-- Vendor Styles -->
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css"/>
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" media="screen" href="assets/vendor/img-comparison-slider/dist/styles.css"/>
+
+    <!-- Main Theme Styles + Bootstrap -->
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+
+    <!-- Page loading styles -->
+    <style>
+      .page-loading {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
+        background-color: #fff;
+        opacity: 0;
+        visibility: hidden;
+        z-index: 9999;
+      }
+      .dark-mode .page-loading {
+        background-color: #131022;
+      }
+      .page-loading.active {
+        opacity: 1;
+        visibility: visible;
+      }
+      .page-loading-inner {
+        position: absolute;
+        top: 50%;
+        left: 0;
+        width: 100%;
+        text-align: center;
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
+        opacity: 0;
+      }
+      .page-loading.active > .page-loading-inner {
+        opacity: 1;
+      }
+      .page-loading-inner > span {
+        display: block;
+        font-size: 1rem;
+        font-weight: normal;
+        color: #9397ad;
+      }
+      .dark-mode .page-loading-inner > span {
+        color: #fff;
+        opacity: .6;
+      }
+      .page-spinner {
+        display: inline-block;
+        width: 2.75rem;
+        height: 2.75rem;
+        margin-bottom: .75rem;
+        vertical-align: text-bottom;
+        border: .15em solid #b4b7c9;
+        border-right-color: transparent;
+        border-radius: 50%;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
+      }
+      .dark-mode .page-spinner {
+        border-color: rgba(255,255,255,.4);
+        border-right-color: transparent;
+      }
+      @-webkit-keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes spinner {
+        100% {
+          -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+        }
+      }
+    </style>
+
+    <!-- Theme mode -->
+    <script>
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== null && mode === 'dark') {
+        root.classList.add('dark-mode');
+      } else {
+        root.classList.remove('dark-mode');
+      }
+    </script>
+
+    <!-- Page loading scripts -->
+    <script>
+      (function () {
+        window.onload = function () {
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
+          setTimeout(function () {
+            preloader.remove();
+          }, 1000);
+        };
+      })();
+    </script>
+  </head>
+
+
+  <!-- Body -->
+  <body>
+
+    <!-- Page loading spinner -->
+    <div class="page-loading active">
+      <div class="page-loading-inner">
+        <div class="page-spinner"></div><span>Loading...</span>
+      </div>
+    </div>
+
+    <!-- Page wrapper for sticky footer -->
+    <!-- Wraps everything except footer to push footer to the bottom of the page if there is little content -->
+    <main class="page-wrapper">
+
+
+      <!-- Navbar -->
+      <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
+      <header class="header navbar navbar-expand-lg navbar-dark bg-dark navbar-sticky">
+        <div class="container px-3">
+          <a href="index.html" class="navbar-brand pe-3">
+            <img src="assets/img/logo.png" width="50" alt="TriStates">
+            TriStates Digital
+          </a>
+          <div id="navbarNav" class="offcanvas offcanvas-end bg-dark">
+            <div class="offcanvas-header border-bottom border-light">
+              <h5 class="offcanvas-title text-white">Menu</h5>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                  <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                  <a href="about.html" class="nav-link">About Us</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                  <ul class="dropdown-menu dropdown-menu-dark">
+                    <li><a href="service-details.html" class="dropdown-item">Software Development</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+            <div class="offcanvas-footer border-top border-light">
+              <a href="contact.html" class="btn btn-primary w-100">
+                <i class="bx bx-phone fs-4 lh-1 me-1"></i>
+                &nbsp;Contact Us
+              </a>
+            </div>      
+          </div>
+          <div class="dark-mode pe-lg-1 ms-auto me-4">
+            <div class="form-check form-switch mode-switch" data-bs-toggle="mode">
+              <input type="checkbox" class="form-check-input" id="theme-mode">
+              <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+              <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
+            </div>
+          </div>
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <a href="contact.html" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex">
+            <i class="bx bx-phone fs-5 lh-1 me-1"></i>
+            &nbsp;Contact Us
+          </a>
+        </div>
+      </header>
+
+
+      <!-- Page content -->
+      <section class="container">
+
+        <!-- Breadcrumb -->
+        <nav class="pt-4 mt-lg-3" aria-label="breadcrumb">
+          <ol class="breadcrumb mb-0">
+            <li class="breadcrumb-item">
+              <a href="index.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
+            </li>
+            <li class="breadcrumb-item active" aria-current="page">Contacts v.2</li>
+          </ol>
+        </nav>
+
+        <!-- Page title -->
+        <h1 class="pt-4 mt-lg-3 pb-3 pb-lg-4">Contact Us</h1>
+
+        <div class="row pb-5 mb-md-2 mb-lg-4 mb-xl-5">
+
+          <!-- Contact details -->
+          <div class="col-xl-5 col-md-6 mb-4 mb-md-0">
+            <div class="card card-hover mb-3">
+              <div class="card-body d-flex align-items-start">
+                <i class="bx bx-envelope fs-3 bg-secondary text-primary d-inline-block rounded-circle p-3"></i>
+                <div class="ps-4">
+                  <h3 class="h4 pb-1 mb-2">Email us</h3>
+                  <p class="pb-1 mb-2">Please feel free to drop us a line. We will respond as soon as possible.</p>
+                  <a href="mailto:silicon@example.com" class="btn btn-link stretched-link fs-base px-0">
+                    Leave a message
+                    <i class="bx bx-right-arrow-alt fs-4 ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="card card-hover mb-3">
+              <div class="card-body d-flex align-items-start">
+                <i class="bx bx-phone-call fs-3 bg-secondary text-primary d-inline-block rounded-circle p-3"></i>
+                <div class="ps-4">
+                  <h3 class="h4 pb-1 mb-2">Call any time</h3>
+                  <p class="pb-1 mb-2">If you need immediate assistance feel free to call us any time.</p>
+                  <a href="tel:4065550120" class="btn btn-link stretched-link fs-base px-0">(406) 555-0120</a>
+                </div>
+              </div>
+            </div>
+            <div class="card card-hover">
+              <div class="card-body d-flex align-items-start">
+                <i class="bx bx-map fs-3 bg-secondary text-primary d-inline-block rounded-circle p-3"></i>
+                <div class="ps-4">
+                  <h3 class="h4 pb-1 mb-2">Visit us</h3>
+                  <p class="pb-1 mb-2">1904 3rd Ave, Seattle, WA 98101, United States, United Sates</p>
+                  <a href="#" class="btn btn-link stretched-link fs-base px-0">
+                    Get directions
+                    <i class="bx bx-right-arrow-alt fs-4 ms-1"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Map -->
+          <div class="col-md-6 offset-xl-1">
+            <div class="d-flex flex-column h-100 shadow-sm rounded-3 overflow-hidden">
+              <iframe class="d-block h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d19629.434226530317!2d-122.33888855763911!3d47.61247058317426!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5490154caee44595%3A0xc262d2caa19b903a!2s1904%203rd%20Ave%2C%20Seattle%2C%20WA%2098101%2C%20USA!5e0!3m2!1sen!2sua!4v1636380604362!5m2!1sen!2sua" style="border: 0; min-height: 300px;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+          </div>
+        </div>
+
+        <!-- Contact form -->
+        <div class="bg-secondary rounded-3 py-5 px-3 px-sm-0 mb-xl-4">
+          <form class="needs-validation row justify-content-center py-lg-3 py-xl-4" novalidate>
+            <div class="col-xl-8 col-lg-9 col-md-10 col-sm-11">
+              <h2 class="h1 pb-lg-1 mb-4">Leave Us a Message</h2>
+              <p class="fs-lg text-muted pb-lg-1 mb-4">Have a project in mind? To request a quote contact us directly or fill out the form and let us know how we can help.</p>
+              <div class="row">
+                <div class="col-sm-6 mb-4">
+                  <label for="name" class="form-label fs-base">Full name</label>
+                  <input type="text" id="name" class="form-control form-control-lg" required>
+                  <div class="invalid-feedback">Please enter your name!</div>
+                </div>
+                <div class="col-sm-6 mb-4">
+                  <label for="email" class="form-label fs-base">Email address</label>
+                  <input type="email" id="email" class="form-control form-control-lg" required>
+                  <div class="invalid-feedback">Please provide a valid email address!</div>
+                </div>
+                <div class="col-12 mb-4">
+                  <label for="message" class="form-label fs-base">Message</label>
+                  <textarea id="message" class="form-control form-control-lg" rows="4" required></textarea>
+                  <div class="invalid-feedback">Please write your message!</div>
+                </div>
+              </div>
+              <div class="form-check mb-4">
+                <input type="checkbox" id="terms" class="form-check-input" required>
+                <label for="terms" class="form-check-label fs-base">I agree to the <a href="#">Terms &amp; Conditions</a></label>
+              </div>
+              <button type="submit" class="btn btn-primary btn-lg shadow-primary">Send message</button>  
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+
+    <!-- Footer -->
+    <footer class="footer bg-dark dark-mode pt-5 pb-4 pb-lg-5">
+      <div class="container text-center pt-lg-4">
+        <div class="navbar-brand justify-content-center text-dark mb-2 mb-lg-4">
+          <img src="assets/img/logo.png" class="me-2" width="60" alt="TriStates Digital">
+          <span class="fs-4">TriStates Digital</span>
+        </div>
+        <ul class="nav justify-content-center pt-3 pb-4">
+          <li class="nav-item"><a href="#" class="nav-link">Home</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Features</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Overview</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Blog</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Contacts</a></li>
+          <li class="nav-item"><a href="#" class="nav-link">Account</a></li>
+        </ul>
+
+        <div class="d-flex justify-content-center pt-4 mt-lg-2">
+          <a href="#" class="btn btn-icon btn-secondary btn-facebook mx-2">
+            <i class="bx bxl-facebook"></i>
+          </a>
+          <a href="#" class="btn btn-icon btn-secondary btn-instagram mx-2">
+            <i class="bx bxl-instagram"></i>
+          </a>
+          <a href="#" class="btn btn-icon btn-secondary btn-twitter mx-2">
+            <i class="bx bxl-twitter"></i>
+          </a>
+          <a href="#" class="btn btn-icon btn-secondary btn-youtube mx-2">
+            <i class="bx bxl-youtube"></i>
+          </a>
+        </div>
+        <p class="fs-sm text-center pt-5 mt-lg-4 mb-0">
+          <span class="text-light opacity-60">&copy; All rights reserved. Made by </span>
+          <a class="nav-link d-inline-block p-0" href="https://aantariksh.com/" target="_blank" rel="noopener">Aantariksh Developers</a>
+        </p>
+      </div>
+    </footer>
+
+
+    <!-- Back to top button -->
+    <a href="#top" class="btn-scroll-top" data-scroll>
+      <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
+      <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
+    </a>
+
+
+    <!-- Vendor Scripts -->
+    <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/vendor/smooth-scroll/dist/smooth-scroll.polyfills.min.js"></script>
+
+    <!-- Main Theme Script -->
+    <script src="assets/js/theme.min.js"></script>
+  </body>
+</html>
