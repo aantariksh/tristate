@@ -1,28 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8">
+    <meta charset="utf-8" />
     <title>TriStates Digital</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="">
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <meta name="author" content="" />
 
     <!-- Viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Favicon and Touch Icons -->
-    <link rel="shortcut icon" href="assets/img/logo.png">
-    <meta name="theme-color" content="#ffffff">
+    <link rel="shortcut icon" href="assets/img/logo.png" />
+    <meta name="theme-color" content="#ffffff" />
 
     <!-- Vendor Styles -->
-    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css"/>
-    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css"/>
-    <link rel="stylesheet" media="screen" href="assets/vendor/img-comparison-slider/dist/styles.css"/>
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="assets/vendor/boxicons/css/boxicons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="assets/vendor/swiper/swiper-bundle.min.css"
+    />
+    <link
+      rel="stylesheet"
+      media="screen"
+      href="assets/vendor/img-comparison-slider/dist/styles.css"
+    />
 
     <!-- Main Theme Styles + Bootstrap -->
-    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
 
     <!-- Page loading styles -->
     <style>
@@ -34,8 +46,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        -webkit-transition: all .4s .2s ease-in-out;
-        transition: all .4s .2s ease-in-out;
+        -webkit-transition: all 0.4s 0.2s ease-in-out;
+        transition: all 0.4s 0.2s ease-in-out;
         background-color: #fff;
         opacity: 0;
         visibility: hidden;
@@ -56,8 +68,8 @@
         text-align: center;
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
-        -webkit-transition: opacity .2s ease-in-out;
-        transition: opacity .2s ease-in-out;
+        -webkit-transition: opacity 0.2s ease-in-out;
+        transition: opacity 0.2s ease-in-out;
         opacity: 0;
       }
       .page-loading.active > .page-loading-inner {
@@ -71,22 +83,22 @@
       }
       .dark-mode .page-loading-inner > span {
         color: #fff;
-        opacity: .6;
+        opacity: 0.6;
       }
       .page-spinner {
         display: inline-block;
         width: 2.75rem;
         height: 2.75rem;
-        margin-bottom: .75rem;
+        margin-bottom: 0.75rem;
         vertical-align: text-bottom;
-        border: .15em solid #b4b7c9;
+        border: 0.15em solid #b4b7c9;
         border-right-color: transparent;
         border-radius: 50%;
-        -webkit-animation: spinner .75s linear infinite;
-        animation: spinner .75s linear infinite;
+        -webkit-animation: spinner 0.75s linear infinite;
+        animation: spinner 0.75s linear infinite;
       }
       .dark-mode .page-spinner {
-        border-color: rgba(255,255,255,.4);
+        border-color: rgba(255, 255, 255, 0.4);
         border-right-color: transparent;
       }
       @-webkit-keyframes spinner {
@@ -105,12 +117,12 @@
 
     <!-- Theme mode -->
     <script>
-      let mode = window.localStorage.getItem('mode'),
-          root = document.getElementsByTagName('html')[0];
-      if (mode !== null && mode === 'dark') {
-        root.classList.add('dark-mode');
+      let mode = window.localStorage.getItem("mode"),
+        root = document.getElementsByTagName("html")[0];
+      if (mode !== null && mode === "dark") {
+        root.classList.add("dark-mode");
       } else {
-        root.classList.remove('dark-mode');
+        root.classList.remove("dark-mode");
       }
     </script>
 
@@ -118,8 +130,8 @@
     <script>
       (function () {
         window.onload = function () {
-          const preloader = document.querySelector('.page-loading');
-          preloader.classList.remove('active');
+          const preloader = document.querySelector(".page-loading");
+          preloader.classList.remove("active");
           setTimeout(function () {
             preloader.remove();
           }, 1000);
@@ -128,14 +140,13 @@
     </script>
   </head>
 
-
   <!-- Body -->
   <body>
-
     <!-- Page loading spinner -->
     <div class="page-loading active">
       <div class="page-loading-inner">
-        <div class="page-spinner"></div><span>Loading...</span>
+        <div class="page-spinner"></div>
+        <span>Loading...</span>
       </div>
     </div>
 
@@ -144,16 +155,23 @@
     <main class="page-wrapper">
       <!-- Navbar -->
       <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
-      <header class="header navbar navbar-expand-lg navbar-dark bg-dark navbar-sticky">
+      <header
+        class="header navbar navbar-expand-lg navbar-dark bg-dark navbar-sticky"
+      >
         <div class="container px-3">
           <a href="index.html" class="navbar-brand pe-3">
-            <img src="assets/img/logo.png" width="50" alt="TriStates">
+            <img src="assets/img/logo.png" width="50" alt="TriStates" />
             TriStates Digital
           </a>
           <div id="navbarNav" class="offcanvas offcanvas-end bg-dark">
             <div class="offcanvas-header border-bottom border-light">
               <h5 class="offcanvas-title text-white">Menu</h5>
-              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+              <button
+                type="button"
+                class="btn-close btn-close-white"
+                data-bs-dismiss="offcanvas"
+                aria-label="Close"
+              ></button>
             </div>
             <div class="offcanvas-body">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -167,14 +185,43 @@
                   <a href="portfolio.html" class="nav-link">Portfolio</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
+                  <a
+                    href="#"
+                    class="nav-link dropdown-toggle"
+                    data-bs-toggle="dropdown"
+                    >Services</a
+                  >
                   <ul class="dropdown-menu dropdown-menu-dark">
-                    <li><a href="web-development.html" class="dropdown-item">Website Development</a></li>
-                    <li><a href="web-hosting.html" class="dropdown-item">Website Hosting</a></li>
-                    <li><a href="ecommerce.html" class="dropdown-item">E-Commerce Integration</a></li>
-                    <li><a href="graphic-design.html" class="dropdown-item">Graphic Designing</a></li>
-                    <li><a href="social-media.html" class="dropdown-item">Social Media Marketing</a></li>
-                    <li><a href="digital-marketing.html" class="dropdown-item">Digital Marketing</a></li>
+                    <li>
+                      <a href="web-development.html" class="dropdown-item"
+                        >Website Development</a
+                      >
+                    </li>
+                    <li>
+                      <a href="web-hosting.html" class="dropdown-item"
+                        >Website Hosting</a
+                      >
+                    </li>
+                    <li>
+                      <a href="ecommerce.html" class="dropdown-item"
+                        >E-Commerce Integration</a
+                      >
+                    </li>
+                    <li>
+                      <a href="graphic-design.html" class="dropdown-item"
+                        >Graphic Designing</a
+                      >
+                    </li>
+                    <li>
+                      <a href="social-media.html" class="dropdown-item"
+                        >Social Media Marketing</a
+                      >
+                    </li>
+                    <li>
+                      <a href="digital-marketing.html" class="dropdown-item"
+                        >Digital Marketing</a
+                      >
+                    </li>
                   </ul>
                 </li>
               </ul>
@@ -184,19 +231,37 @@
                 <i class="bx bx-phone fs-4 lh-1 me-1"></i>
                 &nbsp;Contact Us
               </a>
-            </div>      
-          </div>
-          <div class="dark-mode pe-lg-1 ms-auto me-4">
-            <div class="form-check form-switch mode-switch" data-bs-toggle="mode">
-              <input type="checkbox" class="form-check-input" id="theme-mode">
-              <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
-              <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
             </div>
           </div>
-          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <div class="dark-mode pe-lg-1 ms-auto me-4">
+            <div
+              class="form-check form-switch mode-switch"
+              data-bs-toggle="mode"
+            >
+              <input type="checkbox" class="form-check-input" id="theme-mode" />
+              <label class="form-check-label d-none d-sm-block" for="theme-mode"
+                >Light</label
+              >
+              <label class="form-check-label d-none d-sm-block" for="theme-mode"
+                >Dark</label
+              >
+            </div>
+          </div>
+          <button
+            type="button"
+            class="navbar-toggler"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a href="contact.html" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex">
+          <a
+            href="contact.html"
+            class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex"
+          >
             <i class="bx bx-phone fs-5 lh-1 me-1"></i>
             &nbsp;Contact Us
           </a>
@@ -205,33 +270,43 @@
 
       <!-- Hero -->
       <section class="position-relative pt-5">
-
         <!-- Background -->
-        <div class="position-absolute top-0 start-0 w-100 bg-position-bottom-center bg-size-cover bg-repeat-0" style="background-image: url(assets/img/about/hero-bg.svg);">
-          <div class="d-lg-none" style="height: 960px;"></div>
-          <div class="d-none d-lg-block" style="height: 768px;"></div>
+        <div
+          class="position-absolute top-0 start-0 w-100 bg-position-bottom-center bg-size-cover bg-repeat-0"
+          style="background-image: url(assets/img/about/hero-bg.svg)"
+        >
+          <div class="d-lg-none" style="height: 960px"></div>
+          <div class="d-none d-lg-block" style="height: 768px"></div>
         </div>
 
         <!-- Content -->
         <div class="container position-relative zindex-5">
           <div class="row">
             <div class="col-lg-6">
-              
               <!-- Breadcrumb -->
-              <nav class="pt-md-2 pt-lg-3 pb-4 pb-md-5 mb-xl-4" aria-label="breadcrumb">
+              <nav
+                class="pt-md-2 pt-lg-3 pb-4 pb-md-5 mb-xl-4"
+                aria-label="breadcrumb"
+              >
                 <ol class="breadcrumb mb-0">
-                  <li class="breadcrumb-item">
-                  </li>
+                  <li class="breadcrumb-item"></li>
                 </ol>
               </nav>
 
               <!-- Text -->
               <h1 class="pb-2 pb-md-3">About Us</h1>
-              <p class="fs-xl pb-4 mb-1 mb-md-2 mb-lg-3" style="max-width: 526px;">
-                For the past 10 years, we have helped businesses create their brand presence and achieve their goals. 
-                Our process is designed to empower your brand and outfit your business with the marketing tools needed to succeed. 
-                <br><br>
-                Talk to us today about how we can support your growth, limit your turnover, and put you on a solid track to success and profit.
+              <p
+                class="fs-xl pb-4 mb-1 mb-md-2 mb-lg-3"
+                style="max-width: 526px"
+              >
+                For the past 10 years, we have helped businesses create their
+                brand presence and achieve their goals. Our process is designed
+                to empower your brand and outfit your business with the
+                marketing tools needed to succeed.
+                <br /><br />
+                Talk to us today about how we can support your growth, limit
+                your turnover, and put you on a solid track to success and
+                profit.
               </p>
             </div>
 
@@ -239,12 +314,28 @@
             <div class="col-lg-6 mt-xl-3 pt-5 pt-lg-4">
               <div class="row row-cols-2 gx-3 gx-lg-4">
                 <div class="col pt-lg-5 mt-lg-1">
-                  <img src="assets/img/about/hero/01.jpg" class="d-block rounded-3 mb-3 mb-lg-4" alt="Image">
-                  <img src="assets/img/about/hero/02.jpg" class="d-block rounded-3" alt="Image">
+                  <img
+                    src="assets/img/about/hero/01.jpg"
+                    class="d-block rounded-3 mb-3 mb-lg-4"
+                    alt="Image"
+                  />
+                  <img
+                    src="assets/img/about/hero/02.jpg"
+                    class="d-block rounded-3"
+                    alt="Image"
+                  />
                 </div>
                 <div class="col">
-                  <img src="assets/img/about/hero/03.jpg" class="d-block rounded-3 mb-3 mb-lg-4" alt="Image">
-                  <img src="assets/img/about/hero/04.jpg" class="d-block rounded-3" alt="Image">
+                  <img
+                    src="assets/img/about/hero/03.jpg"
+                    class="d-block rounded-3 mb-3 mb-lg-4"
+                    alt="Image"
+                  />
+                  <img
+                    src="assets/img/about/hero/04.jpg"
+                    class="d-block rounded-3"
+                    alt="Image"
+                  />
                 </div>
               </div>
             </div>
@@ -254,77 +345,165 @@
       <!-- Hero Ends -->
 
       <section class="container mt-3 mb-5 pt-lg-5" id="benefits">
-        <div class="swiper pt-3 swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden" data-swiper-options="{
-          &quot;slidesPerView&quot;: 1,
-          &quot;pagination&quot;: {
-            &quot;el&quot;: &quot;.swiper-pagination&quot;,
-            &quot;clickable&quot;: true
+        <div
+          class="swiper pt-3 swiper-initialized swiper-horizontal swiper-pointer-events swiper-backface-hidden"
+          data-swiper-options='{
+          "slidesPerView": 1,
+          "pagination": {
+            "el": ".swiper-pagination",
+            "clickable": true
           },
-          &quot;breakpoints&quot;: {
-            &quot;500&quot;: {
-              &quot;slidesPerView&quot;: 2
+          "breakpoints": {
+            "500": {
+              "slidesPerView": 2
             },
-            &quot;991&quot;: {
-              &quot;slidesPerView&quot;: 3
+            "991": {
+              "slidesPerView": 3
             }
           }
-        }">
-          <div class="swiper-wrapper pt-4" id="swiper-wrapper-7a2812615b450a43" aria-live="polite" style="transform: translate3d(0px, 0px, 0px);">
-
+        }'
+        >
+          <div
+            class="swiper-wrapper pt-4"
+            id="swiper-wrapper-7a2812615b450a43"
+            aria-live="polite"
+            style="transform: translate3d(0px, 0px, 0px)"
+          >
             <!-- Item -->
-            <div class="swiper-slide border-end-lg px-2 swiper-slide-active" role="group" aria-label="1 / 3" style="width: 415.667px;">
+            <div
+              class="swiper-slide border-end-lg px-2 swiper-slide-active"
+              role="group"
+              aria-label="1 / 3"
+              style="width: 415.667px"
+            >
               <div class="text-center">
-                <img src="assets/img/icons/idea.svg" width="48" alt="Bulb icon" class="d-block mb-4 mx-auto">
+                <img
+                  src="assets/img/icons/idea.svg"
+                  width="48"
+                  alt="Bulb icon"
+                  class="d-block mb-4 mx-auto"
+                />
                 <h4 class="mb-2 pb-1">Creative Solutions</h4>
-                <p class="mx-auto" style="max-width: 336px;">Sed morbi nulla pulvinar lectus tempor vel euismod accumsan.</p>
+                <p class="mx-auto" style="max-width: 336px">
+                  Sed morbi nulla pulvinar lectus tempor vel euismod accumsan.
+                </p>
               </div>
             </div>
 
             <!-- Item -->
-            <div class="swiper-slide border-end-lg px-2 swiper-slide-next" role="group" aria-label="2 / 3" style="width: 415.667px;">
+            <div
+              class="swiper-slide border-end-lg px-2 swiper-slide-next"
+              role="group"
+              aria-label="2 / 3"
+              style="width: 415.667px"
+            >
               <div class="text-center">
-                <img src="assets/img/icons/award.svg" width="48" alt="Award icon" class="d-block mb-4 mx-auto">
+                <img
+                  src="assets/img/icons/award.svg"
+                  width="48"
+                  alt="Award icon"
+                  class="d-block mb-4 mx-auto"
+                />
                 <h4 class="mb-2 pb-1">Award Winning</h4>
-                <p class="mx-auto" style="max-width: 336px;">Sit facilisis dolor arcu, fermentum vestibulum arcu elementum imperdiet.</p>
+                <p class="mx-auto" style="max-width: 336px">
+                  Sit facilisis dolor arcu, fermentum vestibulum arcu elementum
+                  imperdiet.
+                </p>
               </div>
             </div>
 
             <!-- Item -->
-            <div class="swiper-slide px-2" role="group" aria-label="3 / 3" style="width: 415.667px;">
+            <div
+              class="swiper-slide px-2"
+              role="group"
+              aria-label="3 / 3"
+              style="width: 415.667px"
+            >
               <div class="text-center">
-                <img src="assets/img/icons/team.svg" width="48" alt="Team icon" class="d-block mb-4 mx-auto">
+                <img
+                  src="assets/img/icons/team.svg"
+                  width="48"
+                  alt="Team icon"
+                  class="d-block mb-4 mx-auto"
+                />
                 <h4 class="mb-2 pb-1">Team of Professionals</h4>
-                <p class="mx-auto" style="max-width: 336px;">Nam venenatis urna aenean quis feugiat et senectus turpis.</p>
+                <p class="mx-auto" style="max-width: 336px">
+                  Nam venenatis urna aenean quis feugiat et senectus turpis.
+                </p>
               </div>
             </div>
           </div>
 
           <!-- Pagination (bullets) -->
-          <div class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4 swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal swiper-pagination-lock"><span class="swiper-pagination-bullet swiper-pagination-bullet-active" tabindex="0" role="button" aria-label="Go to slide 1" aria-current="true"></span></div>
-        <span class="swiper-notification" aria-live="assertive" aria-atomic="true"></span></div>
+          <div
+            class="swiper-pagination position-relative pt-2 pt-sm-3 mt-4 swiper-pagination-clickable swiper-pagination-bullets swiper-pagination-horizontal swiper-pagination-lock"
+          >
+            <span
+              class="swiper-pagination-bullet swiper-pagination-bullet-active"
+              tabindex="0"
+              role="button"
+              aria-label="Go to slide 1"
+              aria-current="true"
+            ></span>
+          </div>
+          <span
+            class="swiper-notification"
+            aria-live="assertive"
+            aria-atomic="true"
+          ></span>
+        </div>
       </section>
 
       <!-- Our Competencies -->
       <section class="container mb-5 pb-2 pb-md-4 pb-lg-5">
         <div class="card border-0 bg-secondary p-md-5 px-sm-2 pt-4 pb-3">
-          <div class="card-body mx-auto" style="max-width: 860px;">
+          <div class="card-body mx-auto" style="max-width: 860px">
             <h2 class="h1 mb-4 text-center">What We do Best</h2>
-            <p class="mb-4 pb-3 fs-lg text-center text-muted">We fully understand your business. If you need to update something, we are more than happy to help you with the services we are providing.</p>
+            <p class="mb-4 pb-3 fs-lg text-center text-muted">
+              We fully understand your business. If you need to update
+              something, we are more than happy to help you with the services we
+              are providing.
+            </p>
 
             <!-- Accordion: Alternative style -->
             <div class="accordion" id="accordion-services">
-
               <!-- Item -->
               <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
                 <h3 class="accordion-header" id="heading-1">
-                  <button class="accordion-button fs-xl shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="false" aria-controls="collapse-1">Digital Marketing</button>
+                  <button
+                    class="accordion-button fs-xl shadow-none rounded-3 collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-1"
+                    aria-expanded="false"
+                    aria-controls="collapse-1"
+                  >
+                    Digital Marketing
+                  </button>
                 </h3>
-                <div class="accordion-collapse collapse" id="collapse-1" aria-labelledby="heading-1" data-bs-parent="#accordion-services" style="">
+                <div
+                  class="accordion-collapse collapse"
+                  id="collapse-1"
+                  aria-labelledby="heading-1"
+                  data-bs-parent="#accordion-services"
+                >
                   <div class="accordion-body pt-0">
-                    <div class="d-flex flex-md-row flex-column align-items-md-center">
-                      <img src="assets/img/services/digital-marketing.png" width="200" alt="Digital Marketing" class="me-md-4 mb-md-0 mb-3">
+                    <div
+                      class="d-flex flex-md-row flex-column align-items-md-center"
+                    >
+                      <img
+                        src="assets/img/services/digital-marketing.png"
+                        width="200"
+                        alt="Digital Marketing"
+                        class="me-md-4 mb-md-0 mb-3"
+                      />
                       <div class="ps-md-3">
-                        <p class="mb-0">Using our deep experience in running performance campaigns, we provide a wide range of services for the most popular platforms & methods to achieve leads and conversions for your business globally.</p>
+                        <p class="mb-0">
+                          Using our deep experience in running performance
+                          campaigns, we provide a wide range of services for the
+                          most popular platforms & methods to achieve leads and
+                          conversions for your business globally.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -334,14 +513,42 @@
               <!-- Item -->
               <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
                 <h3 class="accordion-header" id="heading-2">
-                  <button class="accordion-button fs-xl shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-2" aria-expanded="false" aria-controls="collapse-2">Web Development</button>
+                  <button
+                    class="accordion-button fs-xl shadow-none rounded-3 collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-2"
+                    aria-expanded="false"
+                    aria-controls="collapse-2"
+                  >
+                    Web Development
+                  </button>
                 </h3>
-                <div class="accordion-collapse collapse" id="collapse-2" aria-labelledby="heading-2" data-bs-parent="#accordion-services">
+                <div
+                  class="accordion-collapse collapse"
+                  id="collapse-2"
+                  aria-labelledby="heading-2"
+                  data-bs-parent="#accordion-services"
+                >
                   <div class="accordion-body pt-0">
-                    <div class="d-flex flex-md-row flex-column align-items-md-center">
-                      <img src="assets/img/services/webdev.png" width="200" alt="Web Development" class="me-md-4 mb-md-0 mb-3">
+                    <div
+                      class="d-flex flex-md-row flex-column align-items-md-center"
+                    >
+                      <img
+                        src="assets/img/services/webdev.png"
+                        width="200"
+                        alt="Web Development"
+                        class="me-md-4 mb-md-0 mb-3"
+                      />
                       <div class="ps-md-3">
-                        <p class="mb-0">The work of our world-class design team is at the core of all our projects and runs throughout all of our services. Remarkable design in digital creativity is crucial and will ultimately help you to exceed the expectations of your customers. We offer professional and state-of-the-art web design services.</p>
+                        <p class="mb-0">
+                          The work of our world-class design team is at the core
+                          of all our projects and runs throughout all of our
+                          services. Remarkable design in digital creativity is
+                          crucial and will ultimately help you to exceed the
+                          expectations of your customers. We offer professional
+                          and state-of-the-art web design services.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -351,14 +558,40 @@
               <!-- Item -->
               <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
                 <h3 class="accordion-header" id="heading-3">
-                  <button class="accordion-button fs-xl shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-3" aria-expanded="false" aria-controls="collapse-3">E-commerce Integration</button>
+                  <button
+                    class="accordion-button fs-xl shadow-none rounded-3 collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-3"
+                    aria-expanded="false"
+                    aria-controls="collapse-3"
+                  >
+                    E-commerce Integration
+                  </button>
                 </h3>
-                <div class="accordion-collapse collapse" id="collapse-3" aria-labelledby="heading-3" data-bs-parent="#accordion-services">
+                <div
+                  class="accordion-collapse collapse"
+                  id="collapse-3"
+                  aria-labelledby="heading-3"
+                  data-bs-parent="#accordion-services"
+                >
                   <div class="accordion-body pt-0">
-                    <div class="d-flex flex-md-row flex-column align-items-md-center">
-                      <img src="assets/img/services/ecommerce.png" width="200" alt="Application Development" class="me-md-4 mb-md-0 mb-3">
+                    <div
+                      class="d-flex flex-md-row flex-column align-items-md-center"
+                    >
+                      <img
+                        src="assets/img/services/ecommerce.png"
+                        width="200"
+                        alt="Application Development"
+                        class="me-md-4 mb-md-0 mb-3"
+                      />
                       <div class="ps-md-3">
-                        <p class="mb-0">Our highly versatile professionals in our team with a great deal of insight in the field of e-commerce industry problem solving attitude with a sense of responsibility and result oriented approaches.</p>
+                        <p class="mb-0">
+                          Our highly versatile professionals in our team with a
+                          great deal of insight in the field of e-commerce
+                          industry problem solving attitude with a sense of
+                          responsibility and result oriented approaches.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -368,14 +601,42 @@
               <!-- Item -->
               <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
                 <h3 class="accordion-header" id="heading-4">
-                  <button class="accordion-button fs-xl shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-4" aria-expanded="false" aria-controls="collapse-4">Graphic Designing</button>
+                  <button
+                    class="accordion-button fs-xl shadow-none rounded-3 collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-4"
+                    aria-expanded="false"
+                    aria-controls="collapse-4"
+                  >
+                    Graphic Designing
+                  </button>
                 </h3>
-                <div class="accordion-collapse collapse" id="collapse-4" aria-labelledby="heading-4" data-bs-parent="#accordion-services">
+                <div
+                  class="accordion-collapse collapse"
+                  id="collapse-4"
+                  aria-labelledby="heading-4"
+                  data-bs-parent="#accordion-services"
+                >
                   <div class="accordion-body pt-0">
-                    <div class="d-flex flex-md-row flex-column align-items-md-center">
-                      <img src="assets/img/services/graphic.png" width="200" alt="Strategy" class="me-md-4 mb-md-0 mb-3">
+                    <div
+                      class="d-flex flex-md-row flex-column align-items-md-center"
+                    >
+                      <img
+                        src="assets/img/services/graphic.png"
+                        width="200"
+                        alt="Strategy"
+                        class="me-md-4 mb-md-0 mb-3"
+                      />
                       <div class="ps-md-3">
-                        <p class="mb-0">Graphic design is all around us, and knowing which things make the difference and how to create a design that stands out is essential. At Tristates Digital, we build brands for a multitude of diverse businesses and understand the importance of world-class graphic design.</p>
+                        <p class="mb-0">
+                          Graphic design is all around us, and knowing which
+                          things make the difference and how to create a design
+                          that stands out is essential. At Tristates Digital, we
+                          build brands for a multitude of diverse businesses and
+                          understand the importance of world-class graphic
+                          design.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -385,14 +646,43 @@
               <!-- Item -->
               <div class="accordion-item border-0 rounded-3 shadow-sm mb-3">
                 <h3 class="accordion-header" id="heading-5">
-                  <button class="accordion-button fs-xl shadow-none rounded-3 collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-5" aria-expanded="false" aria-controls="collapse-5">Digital Advertising</button>
+                  <button
+                    class="accordion-button fs-xl shadow-none rounded-3 collapsed"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#collapse-5"
+                    aria-expanded="false"
+                    aria-controls="collapse-5"
+                  >
+                    Digital Advertising
+                  </button>
                 </h3>
-                <div class="accordion-collapse collapse" id="collapse-5" aria-labelledby="heading-5" data-bs-parent="#accordion-services">
+                <div
+                  class="accordion-collapse collapse"
+                  id="collapse-5"
+                  aria-labelledby="heading-5"
+                  data-bs-parent="#accordion-services"
+                >
                   <div class="accordion-body pt-0">
-                    <div class="d-flex flex-md-row flex-column align-items-md-center">
-                      <img src="assets/img/services/digital-marketing.png" width="200" alt="Digital Advertising" class="me-md-4 mb-md-0 mb-3">
+                    <div
+                      class="d-flex flex-md-row flex-column align-items-md-center"
+                    >
+                      <img
+                        src="assets/img/services/digital-marketing.png"
+                        width="200"
+                        alt="Digital Advertising"
+                        class="me-md-4 mb-md-0 mb-3"
+                      />
                       <div class="ps-md-3">
-                        <p class="mb-0">Using our deep experience in running performance campaigns, we provide a wide range of services for the most popular platforms & methods to achieve leads and conversions for your business globally. We help you increase the reach, we help you increase the traffic and we help you increase the engagement with brand awareness.</p>
+                        <p class="mb-0">
+                          Using our deep experience in running performance
+                          campaigns, we provide a wide range of services for the
+                          most popular platforms & methods to achieve leads and
+                          conversions for your business globally. We help you
+                          increase the reach, we help you increase the traffic
+                          and we help you increase the engagement with brand
+                          awareness.
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -407,55 +697,115 @@
       <!-- Contact Form -->
       <section class="container position-relative zindex-2">
         <div class="position-relative bg-secondary rounded-3 py-5 mb-2">
-          <div class="row pb-2 py-md-3 py-lg-5 px-4 px-lg-0 position-relative zindex-3">
+          <div
+            class="row pb-2 py-md-3 py-lg-5 px-4 px-lg-0 position-relative zindex-3"
+          >
             <div class="col-xl-3 col-lg-4 col-md-5 offset-lg-1">
               <p class="lead mb-2 mb-md-3">Ready to get started?</p>
               <h2 class="h1 pb-3">Don’t Hesitate to Contact Us</h2>
             </div>
-            <form class="col-lg-6 col-md-7 offset-xl-1 needs-validation" novalidate="">
+            <form
+              class="needs-validation col-lg-6 col-md-7 offset-xl-1"
+              id="contact-form"
+              novalidate
+            >
               <div class="row">
                 <div class="col-sm-6 mb-4">
                   <label for="name" class="form-label fs-base">Full name</label>
-                  <input type="text" id="name" class="form-control form-control-lg" required="">
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    class="form-control form-control-lg"
+                    required
+                  />
                   <div class="invalid-feedback">Please enter your name!</div>
                 </div>
                 <div class="col-sm-6 mb-4">
                   <label for="email" class="form-label fs-base">Email</label>
-                  <input type="email" id="email" class="form-control form-control-lg" required="">
-                  <div class="invalid-feedback">Please provide a valid email address!</div>
+                  <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    class="form-control form-control-lg"
+                    required
+                  />
+                  <div class="invalid-feedback">
+                    Please provide a valid email address!
+                  </div>
                 </div>
                 <div class="col-12 pb-2 mb-4">
-                  <label for="message" class="form-label fs-base">Message</label>
-                  <textarea id="message" class="form-control form-control-lg" rows="4" required=""></textarea>
+                  <label for="message" class="form-label fs-base"
+                    >Message</label
+                  >
+                  <textarea
+                    id="message"
+                    name="message"
+                    class="form-control form-control-lg"
+                    rows="4"
+                    required
+                  ></textarea>
                   <div class="invalid-feedback">Please enter your message!</div>
                 </div>
               </div>
-              <button type="submit" class="btn btn-primary shadow-primary btn-lg">Send request</button>
+              <button
+                type="submit"
+                class="btn btn-primary shadow-primary btn-lg"
+              >
+                Send request
+              </button>
             </form>
           </div>
 
           <!-- Pattern -->
           <div class="position-absolute end-0 bottom-0 text-primary">
-            <svg width="416" height="444" viewBox="0 0 416 444" fill="none" xmlns="http://www.w3.org/2000/svg"><path opacity="0.08" fill-rule="evenodd" clip-rule="evenodd" d="M240.875 615.746C389.471 695.311 562.783 640.474 631.69 504.818C700.597 369.163 645.201 191.864 496.604 112.299C348.007 32.7335 174.696 87.5709 105.789 223.227C36.8815 358.882 92.278 536.18 240.875 615.746ZM208.043 680.381C388.035 776.757 605.894 713.247 694.644 538.527C783.394 363.807 709.428 144.04 529.436 47.6636C349.443 -48.7125 131.584 14.7978 42.8343 189.518C-45.916 364.238 28.0504 584.005 208.043 680.381Z" fill="currentColor"></path><path opacity="0.08" fill-rule="evenodd" clip-rule="evenodd" d="M262.68 572.818C382.909 637.194 526.686 594.13 584.805 479.713C642.924 365.295 595.028 219.601 474.799 155.224C354.57 90.8479 210.793 133.912 152.674 248.33C94.5545 362.747 142.45 508.442 262.68 572.818ZM253.924 590.054C382.526 658.913 538.182 613.536 601.593 488.702C665.004 363.867 612.156 206.847 483.554 137.988C354.953 69.129 199.296 114.506 135.886 239.341C72.4752 364.175 125.323 521.195 253.924 590.054Z" fill="currentColor"></path></svg>
+            <svg
+              width="416"
+              height="444"
+              viewBox="0 0 416 444"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                opacity="0.08"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M240.875 615.746C389.471 695.311 562.783 640.474 631.69 504.818C700.597 369.163 645.201 191.864 496.604 112.299C348.007 32.7335 174.696 87.5709 105.789 223.227C36.8815 358.882 92.278 536.18 240.875 615.746ZM208.043 680.381C388.035 776.757 605.894 713.247 694.644 538.527C783.394 363.807 709.428 144.04 529.436 47.6636C349.443 -48.7125 131.584 14.7978 42.8343 189.518C-45.916 364.238 28.0504 584.005 208.043 680.381Z"
+                fill="currentColor"
+              ></path>
+              <path
+                opacity="0.08"
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M262.68 572.818C382.909 637.194 526.686 594.13 584.805 479.713C642.924 365.295 595.028 219.601 474.799 155.224C354.57 90.8479 210.793 133.912 152.674 248.33C94.5545 362.747 142.45 508.442 262.68 572.818ZM253.924 590.054C382.526 658.913 538.182 613.536 601.593 488.702C665.004 363.867 612.156 206.847 483.554 137.988C354.953 69.129 199.296 114.506 135.886 239.341C72.4752 364.175 125.323 521.195 253.924 590.054Z"
+                fill="currentColor"
+              ></path>
+            </svg>
           </div>
         </div>
       </section>
       <!-- Contact Form ends -->
     </main>
 
-
     <!-- Footer -->
-    <footer class="footer dark-mode bg-dark border-top border-light pb-5" style="margin-top: -80px;padding-top: 100px;">
+    <footer
+      class="footer dark-mode bg-dark border-top border-light pb-5"
+      style="margin-top: -80px; padding-top: 100px"
+    >
       <div class="container pt-2 pt-sm-4">
         <div class="row">
-          <div class="col-md-6 col-lg-5 col-xl-4 pb-2 pb-sm-3 pb-md-0 mb-4 mb-md-0">
+          <div
+            class="col-md-6 col-lg-5 col-xl-4 pb-2 pb-sm-3 pb-md-0 mb-4 mb-md-0"
+          >
             <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
-              <img src="assets/img/logo.png" width="47">
+              <img src="assets/img/logo.png" width="47" />
               TriStates Digital
             </div>
-            <p class="mb-0 text-white">One Stop Solution to grow your business online
-              All-in-One Platform for all your digital needs.
-              We offer wide range of online services to make your online presence impactful!</p>
+            <p class="mb-0 text-white">
+              One Stop Solution to grow your business online All-in-One Platform
+              for all your digital needs. We offer wide range of online services
+              to make your online presence impactful!
+            </p>
           </div>
           <div class="col-md-6 col-xxl-5 offset-lg-1 offset-xl-2 offset-xxl-3">
             <div class="row row-cols-1 row-cols-sm-2">
@@ -463,29 +813,47 @@
                 <h3 class="h5 pb-1 pb-sm-2 pb-lg-3">Contact us</h3>
                 <ul class="nav flex-column mb-3">
                   <li>
-                    <a href="tel:+16314458651" class="nav-link fs-lg fw-normal px-0 py-1">
+                    <a
+                      href="tel:+16314458651"
+                      class="nav-link fs-lg fw-normal px-0 py-1"
+                    >
                       <i class="bx bx-phone-call fs-4 me-2"></i>
                       +1 (631) 445-8651
                     </a>
                   </li>
                   <li>
-                    <a href="mailto:info@tristatesdigital.com" class="nav-link fs-lg fw-normal px-0 py-1">
+                    <a
+                      href="mailto:info@tristatesdigital.com"
+                      class="nav-link fs-lg fw-normal px-0 py-1"
+                    >
                       <i class="bx bx-envelope fs-4 me-2"></i>
                       info@tristatesdigital.com
                     </a>
                   </li>
                 </ul>
                 <div class="d-flex pt-2 pt-sm-3 pt-md-4">
-                  <a href="#" class="btn btn-icon btn-secondary btn-facebook rounded-circle me-3">
+                  <a
+                    href="#"
+                    class="btn btn-icon btn-secondary btn-facebook rounded-circle me-3"
+                  >
                     <i class="bx bxl-facebook"></i>
                   </a>
-                  <a href="#" class="btn btn-icon btn-secondary btn-linkedin rounded-circle me-3">
+                  <a
+                    href="#"
+                    class="btn btn-icon btn-secondary btn-linkedin rounded-circle me-3"
+                  >
                     <i class="bx bxl-linkedin"></i>
                   </a>
-                  <a href="#" class="btn btn-icon btn-secondary btn-telegram rounded-circle me-3">
+                  <a
+                    href="#"
+                    class="btn btn-icon btn-secondary btn-telegram rounded-circle me-3"
+                  >
                     <i class="bx bxl-telegram"></i>
                   </a>
-                  <a href="#" class="btn btn-icon btn-secondary btn-youtube rounded-circle me-3">
+                  <a
+                    href="#"
+                    class="btn btn-icon btn-secondary btn-youtube rounded-circle me-3"
+                  >
                     <i class="bx bxl-youtube"></i>
                   </a>
                 </div>
@@ -493,31 +861,78 @@
               <div class="col ps-sm-4 ps-md-5">
                 <h3 class="h5 pb-1 pb-sm-2 pb-lg-3">Services</h3>
                 <ul class="nav flex-column mb-3">
-                  <li><a href="web-development.html" class="nav-link fs-lg fw-normal px-0 py-1"> Website Development </a></li>
-                  <li><a href="web-hosting.html" class="nav-link fs-lg fw-normal px-0 py-1"> Website Hosting </a></li>
-                  <li><a href="ecommerce.html" class="nav-link fs-lg fw-normal px-0 py-1"> E-Commerce Integration </a></li>
-                  <li><a href="graphic-design.html" class="nav-link fs-lg fw-normal px-0 py-1"> Graphic Designing </a></li>
-                  <li><a href="social-media.html" class="nav-link fs-lg fw-normal px-0 py-1"> Social Media Marketing </a></li>
-                  <li><a href="digital-marketing.html" class="nav-link fs-lg fw-normal px-0 py-1"> Digital Marketing </a></li>
+                  <li>
+                    <a
+                      href="web-development.html"
+                      class="nav-link fs-lg fw-normal px-0 py-1"
+                    >
+                      Website Development
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="web-hosting.html"
+                      class="nav-link fs-lg fw-normal px-0 py-1"
+                    >
+                      Website Hosting
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="ecommerce.html"
+                      class="nav-link fs-lg fw-normal px-0 py-1"
+                    >
+                      E-Commerce Integration
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="graphic-design.html"
+                      class="nav-link fs-lg fw-normal px-0 py-1"
+                    >
+                      Graphic Designing
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="social-media.html"
+                      class="nav-link fs-lg fw-normal px-0 py-1"
+                    >
+                      Social Media Marketing
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="digital-marketing.html"
+                      class="nav-link fs-lg fw-normal px-0 py-1"
+                    >
+                      Digital Marketing
+                    </a>
+                  </li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
         <p class="nav d-block fs-sm pt-5 mb-0 text-center">
-          <span class="text-light opacity-60">© All rights reserved. Made by </span>
-          <a class="nav-link d-inline-block p-0" href="https://aantariksh.com/" target="_blank">Aantariksh Developers</a>
+          <span class="text-light opacity-60"
+            >© All rights reserved. Made by
+          </span>
+          <a
+            class="nav-link d-inline-block p-0"
+            href="https://aantariksh.com/"
+            target="_blank"
+            >Aantariksh Developers</a
+          >
         </p>
       </div>
     </footer>
-
 
     <!-- Back to top button -->
     <a href="#top" class="btn-scroll-top" data-scroll>
       <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
       <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
     </a>
-
 
     <!-- Vendor Scripts -->
     <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -526,5 +941,7 @@
 
     <!-- Main Theme Script -->
     <script src="assets/js/theme.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./firebase/contact.js" type="module"></script>
   </body>
 </html>
