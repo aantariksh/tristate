@@ -31,6 +31,7 @@ contactForm.addEventListener("submit", function (event) {
   } else {
     submitContactForm(formData);
   }
+  
 });
 
 function submitContactForm(formData) {

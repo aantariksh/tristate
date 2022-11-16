@@ -1,40 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
+    <meta charset="utf-8">
     <title>TriStates Digital</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="" />
-    <meta name="keywords" content="" />
-    <meta name="author" content="" />
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta name="author" content="">
 
     <!-- Viewport -->
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Favicon and Touch Icons -->
-    <link rel="shortcut icon" href="assets/img/logo.png" />
-    <meta name="theme-color" content="#ffffff" />
+    <link rel="shortcut icon" href="assets/img/logo.png">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- Vendor Styles -->
-    <link
-      rel="stylesheet"
-      media="screen"
-      href="assets/vendor/boxicons/css/boxicons.min.css"
-    />
-    <link
-      rel="stylesheet"
-      media="screen"
-      href="assets/vendor/swiper/swiper-bundle.min.css"
-    />
-    <link
-      rel="stylesheet"
-      media="screen"
-      href="assets/vendor/img-comparison-slider/dist/styles.css"
-    />
+    <link rel="stylesheet" media="screen" href="assets/vendor/boxicons/css/boxicons.min.css"/>
+    <link rel="stylesheet" media="screen" href="assets/vendor/swiper/swiper-bundle.min.css"/>
+    <link rel="stylesheet" media="screen" href="assets/vendor/img-comparison-slider/dist/styles.css"/>
 
     <!-- Main Theme Styles + Bootstrap -->
-    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css" />
+    <link rel="stylesheet" media="screen" href="assets/css/theme.min.css">
 
     <!-- Page loading styles -->
     <style>
@@ -46,8 +34,8 @@
         left: 0;
         width: 100%;
         height: 100%;
-        -webkit-transition: all 0.4s 0.2s ease-in-out;
-        transition: all 0.4s 0.2s ease-in-out;
+        -webkit-transition: all .4s .2s ease-in-out;
+        transition: all .4s .2s ease-in-out;
         background-color: #fff;
         opacity: 0;
         visibility: hidden;
@@ -68,8 +56,8 @@
         text-align: center;
         -webkit-transform: translateY(-50%);
         transform: translateY(-50%);
-        -webkit-transition: opacity 0.2s ease-in-out;
-        transition: opacity 0.2s ease-in-out;
+        -webkit-transition: opacity .2s ease-in-out;
+        transition: opacity .2s ease-in-out;
         opacity: 0;
       }
       .page-loading.active > .page-loading-inner {
@@ -83,22 +71,22 @@
       }
       .dark-mode .page-loading-inner > span {
         color: #fff;
-        opacity: 0.6;
+        opacity: .6;
       }
       .page-spinner {
         display: inline-block;
         width: 2.75rem;
         height: 2.75rem;
-        margin-bottom: 0.75rem;
+        margin-bottom: .75rem;
         vertical-align: text-bottom;
-        border: 0.15em solid #b4b7c9;
+        border: .15em solid #b4b7c9;
         border-right-color: transparent;
         border-radius: 50%;
-        -webkit-animation: spinner 0.75s linear infinite;
-        animation: spinner 0.75s linear infinite;
+        -webkit-animation: spinner .75s linear infinite;
+        animation: spinner .75s linear infinite;
       }
       .dark-mode .page-spinner {
-        border-color: rgba(255, 255, 255, 0.4);
+        border-color: rgba(255,255,255,.4);
         border-right-color: transparent;
       }
       @-webkit-keyframes spinner {
@@ -117,12 +105,12 @@
 
     <!-- Theme mode -->
     <script>
-      let mode = window.localStorage.getItem("mode"),
-        root = document.getElementsByTagName("html")[0];
-      if (mode !== null && mode === "dark") {
-        root.classList.add("dark-mode");
+      let mode = window.localStorage.getItem('mode'),
+          root = document.getElementsByTagName('html')[0];
+      if (mode !== null && mode === 'dark') {
+        root.classList.add('dark-mode');
       } else {
-        root.classList.remove("dark-mode");
+        root.classList.remove('dark-mode');
       }
     </script>
 
@@ -130,8 +118,8 @@
     <script>
       (function () {
         window.onload = function () {
-          const preloader = document.querySelector(".page-loading");
-          preloader.classList.remove("active");
+          const preloader = document.querySelector('.page-loading');
+          preloader.classList.remove('active');
           setTimeout(function () {
             preloader.remove();
           }, 1000);
@@ -140,13 +128,14 @@
     </script>
   </head>
 
+
   <!-- Body -->
   <body>
+
     <!-- Page loading spinner -->
     <div class="page-loading active">
       <div class="page-loading-inner">
-        <div class="page-spinner"></div>
-        <span>Loading...</span>
+        <div class="page-spinner"></div><span>Loading...</span>
       </div>
     </div>
 
@@ -155,23 +144,16 @@
     <main class="page-wrapper">
       <!-- Navbar -->
       <!-- Remove "navbar-sticky" class to make navigation bar scrollable with the page -->
-      <header
-        class="header navbar navbar-expand-lg navbar-dark bg-dark navbar-sticky"
-      >
+      <header class="header navbar navbar-expand-lg navbar-dark bg-dark navbar-sticky">
         <div class="container px-3">
           <a href="index.html" class="navbar-brand pe-3">
-            <img src="assets/img/logo.png" width="50" alt="TriStates" />
+            <img src="assets/img/logo.png" width="50" alt="TriStates">
             TriStates Digital
           </a>
           <div id="navbarNav" class="offcanvas offcanvas-end bg-dark">
             <div class="offcanvas-header border-bottom border-light">
               <h5 class="offcanvas-title text-white">Menu</h5>
-              <button
-                type="button"
-                class="btn-close btn-close-white"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
+              <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
             </div>
             <div class="offcanvas-body">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -185,43 +167,14 @@
                   <a href="portfolio.html" class="nav-link">Portfolio</a>
                 </li>
                 <li class="nav-item dropdown">
-                  <a
-                    href="#"
-                    class="nav-link dropdown-toggle"
-                    data-bs-toggle="dropdown"
-                    >Services</a
-                  >
+                  <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Services</a>
                   <ul class="dropdown-menu dropdown-menu-dark">
-                    <li>
-                      <a href="web-development.html" class="dropdown-item"
-                        >Website Development</a
-                      >
-                    </li>
-                    <li>
-                      <a href="web-hosting.html" class="dropdown-item"
-                        >Website Hosting</a
-                      >
-                    </li>
-                    <li>
-                      <a href="ecommerce.html" class="dropdown-item"
-                        >E-Commerce Integration</a
-                      >
-                    </li>
-                    <li>
-                      <a href="graphic-design.html" class="dropdown-item"
-                        >Graphic Designing</a
-                      >
-                    </li>
-                    <li>
-                      <a href="social-media.html" class="dropdown-item"
-                        >Social Media Marketing</a
-                      >
-                    </li>
-                    <li>
-                      <a href="digital-marketing.html" class="dropdown-item"
-                        >Digital Marketing</a
-                      >
-                    </li>
+                    <li><a href="web-development.html" class="dropdown-item">Website Development</a></li>
+                    <li><a href="web-hosting.html" class="dropdown-item">Website Hosting</a></li>
+                    <li><a href="ecommerce.html" class="dropdown-item">E-Commerce Integration</a></li>
+                    <li><a href="graphic-design.html" class="dropdown-item">Graphic Designing</a></li>
+                    <li><a href="social-media.html" class="dropdown-item">Social Media Marketing</a></li>
+                    <li><a href="digital-marketing.html" class="dropdown-item">Digital Marketing</a></li>
                   </ul>
                 </li>
               </ul>
@@ -231,56 +184,36 @@
                 <i class="bx bx-phone fs-4 lh-1 me-1"></i>
                 &nbsp;Contact Us
               </a>
-            </div>
+            </div>      
           </div>
           <div class="dark-mode pe-lg-1 ms-auto me-4">
-            <div
-              class="form-check form-switch mode-switch"
-              data-bs-toggle="mode"
-            >
-              <input type="checkbox" class="form-check-input" id="theme-mode" />
-              <label class="form-check-label d-none d-sm-block" for="theme-mode"
-                >Light</label
-              >
-              <label class="form-check-label d-none d-sm-block" for="theme-mode"
-                >Dark</label
-              >
+            <div class="form-check form-switch mode-switch" data-bs-toggle="mode">
+              <input type="checkbox" class="form-check-input" id="theme-mode">
+              <label class="form-check-label d-none d-sm-block" for="theme-mode">Light</label>
+              <label class="form-check-label d-none d-sm-block" for="theme-mode">Dark</label>
             </div>
           </div>
-          <button
-            type="button"
-            class="navbar-toggler"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-          >
+          <button type="button" class="navbar-toggler" data-bs-toggle="offcanvas" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
-          <a
-            href="contact.html"
-            class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex"
-          >
+          <a href="contact.html" class="btn btn-primary btn-sm fs-sm rounded d-none d-lg-inline-flex">
             <i class="bx bx-phone fs-5 lh-1 me-1"></i>
             &nbsp;Contact Us
           </a>
         </div>
       </header>
 
+
       <!-- Page content -->
       <section class="container">
+
         <!-- Breadcrumb -->
         <nav class="pt-4 mt-lg-3" aria-label="breadcrumb">
           <ol class="breadcrumb mb-0">
             <li class="breadcrumb-item">
-              <a href="index.html"
-                ><i class="bx bx-home-alt fs-lg me-1"></i>Home</a
-              >
+              <a href="index.html"><i class="bx bx-home-alt fs-lg me-1"></i>Home</a>
             </li>
-            <li class="breadcrumb-item active" aria-current="page">
-              Contacts v.2
-            </li>
+            <li class="breadcrumb-item active" aria-current="page">Contacts v.2</li>
           </ol>
         </nav>
 
@@ -288,23 +221,16 @@
         <h1 class="pt-4 mt-lg-3 pb-3 pb-lg-4">Contact Us</h1>
 
         <div class="row pb-5 mb-md-2 mb-lg-4 mb-xl-5">
+
           <!-- Contact details -->
           <div class="col-xl-5 col-md-6 mb-4 mb-md-0">
             <div class="card card-hover mb-3">
               <div class="card-body d-flex align-items-start">
-                <i
-                  class="bx bx-envelope fs-3 bg-secondary text-primary d-inline-block rounded-circle p-3"
-                ></i>
+                <i class="bx bx-envelope fs-3 bg-secondary text-primary d-inline-block rounded-circle p-3"></i>
                 <div class="ps-4">
                   <h3 class="h4 pb-1 mb-2">Email us</h3>
-                  <p class="pb-1 mb-2">
-                    Please feel free to drop us a line. We will respond as soon
-                    as possible.
-                  </p>
-                  <a
-                    href="mailto:info@tristatesdigital.com"
-                    class="btn btn-link stretched-link fs-base px-0"
-                  >
+                  <p class="pb-1 mb-2">Please feel free to drop us a line. We will respond as soon as possible.</p>
+                  <a href="mailto:info@tristatesdigital.com" class="btn btn-link stretched-link fs-base px-0">
                     info@tristatesdigital.com
                   </a>
                 </div>
@@ -312,34 +238,20 @@
             </div>
             <div class="card card-hover mb-3">
               <div class="card-body d-flex align-items-start">
-                <i
-                  class="bx bx-phone-call fs-3 bg-secondary text-primary d-inline-block rounded-circle p-3"
-                ></i>
+                <i class="bx bx-phone-call fs-3 bg-secondary text-primary d-inline-block rounded-circle p-3"></i>
                 <div class="ps-4">
                   <h3 class="h4 pb-1 mb-2">Call any time</h3>
-                  <p class="pb-1 mb-2">
-                    If you need immediate assistance feel free to call us any
-                    time.
-                  </p>
-                  <a
-                    href="tel:+16314458651"
-                    class="btn btn-link stretched-link fs-base px-0"
-                    >+1 (631) 445-8651</a
-                  >
+                  <p class="pb-1 mb-2">If you need immediate assistance feel free to call us any time.</p>
+                  <a href="tel:+16314458651" class="btn btn-link stretched-link fs-base px-0">+1 (631) 445-8651</a>
                 </div>
               </div>
             </div>
             <div class="card card-hover">
               <div class="card-body d-flex align-items-start">
-                <i
-                  class="bx bx-map fs-3 bg-secondary text-primary d-inline-block rounded-circle p-3"
-                ></i>
+                <i class="bx bx-map fs-3 bg-secondary text-primary d-inline-block rounded-circle p-3"></i>
                 <div class="ps-4">
                   <h3 class="h4 pb-1 mb-2">Visit us</h3>
-                  <p class="pb-1 mb-2">
-                    329S, Oyster Bay Rd, Suit #505, Plainview, Newyork, 11803,
-                    United Sates
-                  </p>
+                  <p class="pb-1 mb-2">329S, Oyster Bay Rd, Suit #505, Plainview, Newyork, 11803, United Sates</p>
                   <a href="#" class="btn btn-link stretched-link fs-base px-0">
                     Get directions
                     <i class="bx bx-right-arrow-alt fs-4 ms-1"></i>
@@ -351,16 +263,8 @@
 
           <!-- Map -->
           <div class="col-md-6 offset-xl-1">
-            <div
-              class="d-flex flex-column h-100 shadow-sm rounded-3 overflow-hidden"
-            >
-              <iframe
-                class="d-block h-100"
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.8784999124396!2d-73.5028868!3d40.7866852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c281985183960f%3A0x3fdac5d702d7abc7!2s329%20S%20Oyster%20Bay%20Rd%20Suite%20%23505%2C%20Plainview%2C%20NY%2011803%2C%20USA!5e0!3m2!1sen!2sin!4v1660836830518!5m2!1sen!2sin"
-                style="border: 0; min-height: 300px"
-                allowfullscreen=""
-                loading="lazy"
-              ></iframe>
+            <div class="d-flex flex-column h-100 shadow-sm rounded-3 overflow-hidden">
+              <iframe class="d-block h-100" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3020.8784999124396!2d-73.5028868!3d40.7866852!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c281985183960f%3A0x3fdac5d702d7abc7!2s329%20S%20Oyster%20Bay%20Rd%20Suite%20%23505%2C%20Plainview%2C%20NY%2011803%2C%20USA!5e0!3m2!1sen!2sin!4v1660836830518!5m2!1sen!2sin" style="border: 0; min-height: 300px;" allowfullscreen="" loading="lazy"></iframe>
             </div>
           </div>
         </div>
@@ -369,75 +273,28 @@
       <!-- Contact Form -->
       <section class="container position-relative zindex-2">
         <div class="bg-secondary rounded-3 py-5 px-3 px-sm-0 mb-xl-4">
-          <form
-            class="needs-validation row justify-content-center py-lg-3 py-xl-4"
-            id="contact-form"
-            novalidate
-          >
+          <form class="needs-validation row justify-content-center py-lg-3 py-xl-4" id="contact-form">
             <div class="col-xl-8 col-lg-9 col-md-10 col-sm-11">
               <h2 class="h1 pb-lg-1 mb-4">Leave Us a Message</h2>
-              <p class="fs-lg text-muted pb-lg-1 mb-4">
-                Have a project in mind? To request a quote contact us directly
-                or fill out the form and let us know how we can help.
-              </p>
+              <p class="fs-lg text-muted pb-lg-1 mb-4">Have a project in mind? To request a quote contact us directly or fill out the form and let us know how we can help.</p>
               <div class="row">
                 <div class="col-sm-6 mb-4">
                   <label for="name" class="form-label fs-base">Full name</label>
-                  <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    class="form-control form-control-lg"
-                    required
-                  />
+                  <input type="text" id="name" name="name" class="form-control form-control-lg" required>
                   <div class="invalid-feedback">Please enter your name!</div>
                 </div>
                 <div class="col-sm-6 mb-4">
-                  <label for="email" class="form-label fs-base"
-                    >Email address</label
-                  >
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    class="form-control form-control-lg"
-                    required
-                  />
-                  <div class="invalid-feedback">
-                    Please provide a valid email address!
-                  </div>
+                  <label for="email" class="form-label fs-base">Email address</label>
+                  <input type="email" id="email" name="email" class="form-control form-control-lg" required>
+                  <div class="invalid-feedback">Please provide a valid email address!</div>
                 </div>
                 <div class="col-12 mb-4">
-                  <label for="message" class="form-label fs-base"
-                    >Message</label
-                  >
-                  <textarea
-                    id="message"
-                    class="form-control form-control-lg"
-                    name="message"
-                    rows="4"
-                    required
-                  ></textarea>
+                  <label for="message" class="form-label fs-base">Message</label>
+                  <textarea id="message" name="message" class="form-control form-control-lg" rows="4" required></textarea>
                   <div class="invalid-feedback">Please write your message!</div>
                 </div>
               </div>
-              <div class="form-check mb-4">
-                <input
-                  type="checkbox"
-                  id="terms"
-                  class="form-check-input"
-                  required
-                />
-                <label for="terms" class="form-check-label fs-base"
-                  >I agree to the <a href="#">Terms &amp; Conditions</a></label
-                >
-              </div>
-              <button
-                type="submit"
-                class="btn btn-primary btn-lg shadow-primary"
-              >
-                Send message
-              </button>
+              <button type="submit" class="btn btn-primary btn-lg shadow-primary">Send message</button>  
             </div>
           </form>
         </div>
@@ -445,25 +302,19 @@
       <!-- Contact Form ends -->
     </main>
 
+
     <!-- Footer -->
-    <footer
-      class="footer dark-mode bg-dark border-top border-light pb-5"
-      style="margin-top: -80px; padding-top: 100px"
-    >
+    <footer class="footer dark-mode bg-dark border-top border-light pb-5" style="margin-top: -80px;padding-top: 100px;">
       <div class="container pt-2 pt-sm-4">
         <div class="row">
-          <div
-            class="col-md-6 col-lg-5 col-xl-4 pb-2 pb-sm-3 pb-md-0 mb-4 mb-md-0"
-          >
+          <div class="col-md-6 col-lg-5 col-xl-4 pb-2 pb-sm-3 pb-md-0 mb-4 mb-md-0">
             <div class="navbar-brand text-dark p-0 me-0 mb-3 mb-lg-4">
-              <img src="assets/img/logo.png" width="47" />
+              <img src="assets/img/logo.png" width="47">
               TriStates Digital
             </div>
-            <p class="mb-0 text-white">
-              One Stop Solution to grow your business online All-in-One Platform
-              for all your digital needs. We offer wide range of online services
-              to make your online presence impactful!
-            </p>
+            <p class="mb-0 text-white">One Stop Solution to grow your business online
+              All-in-One Platform for all your digital needs.
+              We offer wide range of online services to make your online presence impactful!</p>
           </div>
           <div class="col-md-6 col-xxl-5 offset-lg-1 offset-xl-2 offset-xxl-3">
             <div class="row row-cols-1 row-cols-sm-2">
@@ -471,47 +322,29 @@
                 <h3 class="h5 pb-1 pb-sm-2 pb-lg-3">Contact us</h3>
                 <ul class="nav flex-column mb-3">
                   <li>
-                    <a
-                      href="tel:+16314458651"
-                      class="nav-link fs-lg fw-normal px-0 py-1"
-                    >
+                    <a href="tel:+16314458651" class="nav-link fs-lg fw-normal px-0 py-1">
                       <i class="bx bx-phone-call fs-4 me-2"></i>
                       +1 (631) 445-8651
                     </a>
                   </li>
                   <li>
-                    <a
-                      href="mailto:info@tristatesdigital.com"
-                      class="nav-link fs-lg fw-normal px-0 py-1"
-                    >
+                    <a href="mailto:info@tristatesdigital.com" class="nav-link fs-lg fw-normal px-0 py-1">
                       <i class="bx bx-envelope fs-4 me-2"></i>
                       info@tristatesdigital.com
                     </a>
                   </li>
                 </ul>
                 <div class="d-flex pt-2 pt-sm-3 pt-md-4">
-                  <a
-                    href="#"
-                    class="btn btn-icon btn-secondary btn-facebook rounded-circle me-3"
-                  >
+                  <a href="#" class="btn btn-icon btn-secondary btn-facebook rounded-circle me-3">
                     <i class="bx bxl-facebook"></i>
                   </a>
-                  <a
-                    href="#"
-                    class="btn btn-icon btn-secondary btn-linkedin rounded-circle me-3"
-                  >
+                  <a href="#" class="btn btn-icon btn-secondary btn-linkedin rounded-circle me-3">
                     <i class="bx bxl-linkedin"></i>
                   </a>
-                  <a
-                    href="#"
-                    class="btn btn-icon btn-secondary btn-telegram rounded-circle me-3"
-                  >
+                  <a href="#" class="btn btn-icon btn-secondary btn-telegram rounded-circle me-3">
                     <i class="bx bxl-telegram"></i>
                   </a>
-                  <a
-                    href="#"
-                    class="btn btn-icon btn-secondary btn-youtube rounded-circle me-3"
-                  >
+                  <a href="#" class="btn btn-icon btn-secondary btn-youtube rounded-circle me-3">
                     <i class="bx bxl-youtube"></i>
                   </a>
                 </div>
@@ -519,69 +352,20 @@
               <div class="col ps-sm-4 ps-md-5">
                 <h3 class="h5 pb-1 pb-sm-2 pb-lg-3">Services</h3>
                 <ul class="nav flex-column mb-3">
-                  <li>
-                    <a
-                      href="web-development.html"
-                      class="nav-link fs-lg fw-normal px-0 py-1"
-                    >
-                      Website Development
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="web-hosting.html"
-                      class="nav-link fs-lg fw-normal px-0 py-1"
-                    >
-                      Website Hosting
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="ecommerce.html"
-                      class="nav-link fs-lg fw-normal px-0 py-1"
-                    >
-                      E-Commerce Integration
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="graphic-design.html"
-                      class="nav-link fs-lg fw-normal px-0 py-1"
-                    >
-                      Graphic Designing
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="social-media.html"
-                      class="nav-link fs-lg fw-normal px-0 py-1"
-                    >
-                      Social Media Marketing
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="digital-marketing.html"
-                      class="nav-link fs-lg fw-normal px-0 py-1"
-                    >
-                      Digital Marketing
-                    </a>
-                  </li>
+                  <li><a href="web-development.html" class="nav-link fs-lg fw-normal px-0 py-1"> Website Development </a></li>
+                  <li><a href="web-hosting.html" class="nav-link fs-lg fw-normal px-0 py-1"> Website Hosting </a></li>
+                  <li><a href="ecommerce.html" class="nav-link fs-lg fw-normal px-0 py-1"> E-Commerce Integration </a></li>
+                  <li><a href="graphic-design.html" class="nav-link fs-lg fw-normal px-0 py-1"> Graphic Designing </a></li>
+                  <li><a href="social-media.html" class="nav-link fs-lg fw-normal px-0 py-1"> Social Media Marketing </a></li>
+                  <li><a href="digital-marketing.html" class="nav-link fs-lg fw-normal px-0 py-1"> Digital Marketing </a></li>
                 </ul>
               </div>
             </div>
           </div>
         </div>
         <p class="nav d-block fs-sm pt-5 mb-0 text-center">
-          <span class="text-light opacity-60"
-            >© All rights reserved. Made by
-          </span>
-          <a
-            class="nav-link d-inline-block p-0"
-            href="https://aantariksh.com/"
-            target="_blank"
-            >Aantariksh Developers</a
-          >
+          <span class="text-light opacity-60">© All rights reserved. Made by </span>
+          <a class="nav-link d-inline-block p-0" href="https://aantariksh.com/" target="_blank">Aantariksh Developers</a>
         </p>
       </div>
     </footer>
