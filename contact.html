@@ -273,30 +273,26 @@
       <!-- Contact Form -->
       <section class="container position-relative zindex-2">
         <div class="bg-secondary rounded-3 py-5 px-3 px-sm-0 mb-xl-4">
-          <form class="needs-validation row justify-content-center py-lg-3 py-xl-4" novalidate>
+          <form class="needs-validation row justify-content-center py-lg-3 py-xl-4" id="contact-form">
             <div class="col-xl-8 col-lg-9 col-md-10 col-sm-11">
               <h2 class="h1 pb-lg-1 mb-4">Leave Us a Message</h2>
               <p class="fs-lg text-muted pb-lg-1 mb-4">Have a project in mind? To request a quote contact us directly or fill out the form and let us know how we can help.</p>
               <div class="row">
                 <div class="col-sm-6 mb-4">
                   <label for="name" class="form-label fs-base">Full name</label>
-                  <input type="text" id="name" class="form-control form-control-lg" required>
+                  <input type="text" id="name" name="name" class="form-control form-control-lg" required>
                   <div class="invalid-feedback">Please enter your name!</div>
                 </div>
                 <div class="col-sm-6 mb-4">
                   <label for="email" class="form-label fs-base">Email address</label>
-                  <input type="email" id="email" class="form-control form-control-lg" required>
+                  <input type="email" id="email" name="email" class="form-control form-control-lg" required>
                   <div class="invalid-feedback">Please provide a valid email address!</div>
                 </div>
                 <div class="col-12 mb-4">
                   <label for="message" class="form-label fs-base">Message</label>
-                  <textarea id="message" class="form-control form-control-lg" rows="4" required></textarea>
+                  <textarea id="message" name="message" class="form-control form-control-lg" rows="4" required></textarea>
                   <div class="invalid-feedback">Please write your message!</div>
                 </div>
-              </div>
-              <div class="form-check mb-4">
-                <input type="checkbox" id="terms" class="form-check-input" required>
-                <label for="terms" class="form-check-label fs-base">I agree to the <a href="#">Terms &amp; Conditions</a></label>
               </div>
               <button type="submit" class="btn btn-primary btn-lg shadow-primary">Send message</button>  
             </div>
@@ -374,13 +370,11 @@
       </div>
     </footer>
 
-
     <!-- Back to top button -->
     <a href="#top" class="btn-scroll-top" data-scroll>
       <span class="btn-scroll-top-tooltip text-muted fs-sm me-2">Top</span>
       <i class="btn-scroll-top-icon bx bx-chevron-up"></i>
     </a>
-
 
     <!-- Vendor Scripts -->
     <script src="assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
@@ -388,5 +382,7 @@
 
     <!-- Main Theme Script -->
     <script src="assets/js/theme.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="./firebase/contact.js" type="module"></script>
   </body>
 </html>
